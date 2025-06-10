@@ -14,7 +14,7 @@ def main(big_query_client=client):
         source_format=bigquery.SourceFormat.CSV,
         skip_leading_rows=1,
     )
-    uri = "gs://sidd-ml-ops/us-states.csv"
+    uri = "gs://end-to-end-mlops-sid-01/us-states.csv"
     load_job = big_query_client.load_table_from_uri(
         uri, table_id, job_config=job_config
     )
